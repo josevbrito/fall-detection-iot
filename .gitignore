@@ -1,0 +1,5 @@
+.pio/
+.vscode/
+firmware/include/config.h
+*.o
+*.d
