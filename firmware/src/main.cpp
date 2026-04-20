@@ -8,6 +8,7 @@
 #include "sensor.h"
 #include "fall_detector.h"
 #include "mqtt_manager.h"
+#include "diagnostics.h"
 
 // Variáveis para controle de publicação de telemetria
 unsigned long lastTelemetryTime = 0;
@@ -22,16 +23,18 @@ void setup() {
   // Banner de inicialização
   Serial.println("==========================================");
   Serial.println("  Fall Detection IoT — ESP32");
-  Serial.println("  Publicação MQTT");
+  Serial.println("  Validação do Algoritmo de Detecção de Queda");
   Serial.println("==========================================");
 
   // Conecta à rede Wi-Fi
   wifi_connect();
   // Conecta ao broker MQTT
   mqtt_connect();
+  // Imprime diagnóstico do sistema
+  diagnostics_print(mqttClient);
 
-  // Mensagem inicial
-  Serial.println("\n[Sistema] Monitorando e publicando dados...\n");
+  // Mensagem de início do monitoramento
+  Serial.println("[Sistema] Monitoramento iniciado.\n");
 }
 
 // Função de loop principal
