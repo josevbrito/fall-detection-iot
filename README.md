@@ -61,3 +61,14 @@ fall-detection-iot/
 
 Professor orientador: Prof. Dr. Luiz Henrique Neves Rodrigues  
 Disciplina: Sistemas Distribuídos — CCET / UFMA
+
+## Status do Projeto
+
+- Etapa 1 - Firmware do ESP32 com sensor simulado
+- [x] Etapa 1.1 — Estrutura do repositório
+- [x] Etapa 1.2 — Configuração do ambiente (PlatformIO)
+- [x] Etapa 1.3 — Conexão Wi-Fi
+- [ ] Etapa 1.4 — Simulação do MPU6050
+- [ ] Etapa 1.5 — Algoritmo de detecção de queda
+- [ ] Etapa 1.6 — Publicação MQTT
+- [ ] Etapa 1.7 — Teste local com Serial Monitor
