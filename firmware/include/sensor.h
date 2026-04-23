@@ -27,6 +27,7 @@ bool sensor_init() {
   // Inicia comunicação I2C e configura o MPU6050
   Wire.begin(21, 22);
   mpu.initialize();
+  mpu.setSleepEnabled(false);
 
   // Verifica se o sensor está respondendo
   if (!mpu.testConnection()) {
